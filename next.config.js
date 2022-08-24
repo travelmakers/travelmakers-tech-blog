@@ -58,6 +58,10 @@ module.exports = withBundleAnalyzer({
   eslint: {
     dirs: ['pages', 'components', 'lib', 'layouts', 'scripts'],
   },
+  images: {
+    loader: 'imgix',
+    path: 'https://travelmakers.github.io/travelmakers-tech-blog/',
+  },
   async headers() {
     return [
       {
