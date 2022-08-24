@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://devboy.vercel.app/about</loc>
+  </url>
+
+  <url>
+    <loc>https://devboy.vercel.app/blog</loc>
+  </url>
+
+  <url>
+    <loc>https://devboy.vercel.app</loc>
+  </url>
+
+  <url>
+    <loc>https://devboy.vercel.app/tags</loc>
+  </url>
+
+  <url>
+    <loc>https://devboy.vercel.app/blog/removing-sensitive-data-from-git</loc>
+  </url>
+
+  <url>
+    <loc>https://devboy.vercel.app/blog/vscode-snippets</loc>
+  </url>
+
+  <url>
+    <loc>https://devboy.vercel.app/tags/git</loc>
+  </url>
+
+  <url>
+    <loc>https://devboy.vercel.app/tags/react</loc>
+  </url>
+
+  <url>
+    <loc>https://devboy.vercel.app/tags/snippet</loc>
+  </url>
+
+  <url>
+    <loc>https://devboy.vercel.app/tags/typescript</loc>
+  </url>
+
+  <url>
+    <loc>https://devboy.vercel.app/tags/vscode</loc>
+  </url>
+</urlset>

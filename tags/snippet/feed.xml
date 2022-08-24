@@ -1,0 +1,24 @@
+
+  <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+      <title>DevBoy Blog</title>
+      <link>https://devboy.vercel.app/blog</link>
+      <description>Mohammad Reza Ghasemi&#39;s Personal Blog</description>
+      <language>en-us</language>
+      <managingEditor>mrghasemi1992@gmail.com (Mohammad Reza Ghasemi)</managingEditor>
+      <webMaster>mrghasemi1992@gmail.com (Mohammad Reza Ghasemi)</webMaster>
+      <lastBuildDate>Mon, 08 Nov 2021 00:00:00 GMT</lastBuildDate>
+      <atom:link href="https://devboy.vercel.app/tags/snippet/feed.xml" rel="self" type="application/rss+xml"/>
+      
+  <item>
+    <guid>https://devboy.vercel.app/blog/vscode-snippets</guid>
+    <title>What are Snippets in VSCode?</title>
+    <link>https://devboy.vercel.app/blog/vscode-snippets</link>
+    <description>Code snippets are templates that make it easier to enter repeating code patterns, such as loops or conditional-statements.</description>
+    <pubDate>Mon, 08 Nov 2021 00:00:00 GMT</pubDate>
+    <author>mrghasemi1992@gmail.com (Mohammad Reza Ghasemi)</author>
+    <category>vscode</category><category>snippet</category><category>react</category><category>typescript</category>
+  </item>
+
+    </channel>
+  </rss>

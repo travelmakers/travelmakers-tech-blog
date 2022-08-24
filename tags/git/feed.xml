@@ -1,0 +1,24 @@
+
+  <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+      <title>DevBoy Blog</title>
+      <link>https://devboy.vercel.app/blog</link>
+      <description>Mohammad Reza Ghasemi&#39;s Personal Blog</description>
+      <language>en-us</language>
+      <managingEditor>mrghasemi1992@gmail.com (Mohammad Reza Ghasemi)</managingEditor>
+      <webMaster>mrghasemi1992@gmail.com (Mohammad Reza Ghasemi)</webMaster>
+      <lastBuildDate>Fri, 03 Sep 2021 00:00:00 GMT</lastBuildDate>
+      <atom:link href="https://devboy.vercel.app/tags/git/feed.xml" rel="self" type="application/rss+xml"/>
+      
+  <item>
+    <guid>https://devboy.vercel.app/blog/removing-sensitive-data-from-git</guid>
+    <title>Removing sensitive data from the git history</title>
+    <link>https://devboy.vercel.app/blog/removing-sensitive-data-from-git</link>
+    <description>Its a bad practice to keep sensitive data like password in your repository. How can I remove that from previous commits (git history)?</description>
+    <pubDate>Fri, 03 Sep 2021 00:00:00 GMT</pubDate>
+    <author>mrghasemi1992@gmail.com (Mohammad Reza Ghasemi)</author>
+    <category>git</category>
+  </item>
+
+    </channel>
+  </rss>
