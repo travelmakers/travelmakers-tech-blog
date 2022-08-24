@@ -60,7 +60,7 @@ module.exports = withBundleAnalyzer({
   },
   images: {
     loader: 'imgix',
-    path: '/',
+    path: 'https://travelmakers.github.io/travelmakers-tech-blog/',
   },
   async headers() {
     return [
