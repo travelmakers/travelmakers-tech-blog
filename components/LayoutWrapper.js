@@ -5,7 +5,6 @@ import MobileNav from './MobileNav'
 import SectionContainer from './SectionContainer'
 import ThemeSwitch from './ThemeSwitch'
 import headerNavLinks from '@/data/headerNavLinks'
-import { prefix } from '@/lib/prefix'
 import siteMetadata from '@/data/siteMetadata'
 
 const LayoutWrapper = ({ children }) => {
@@ -17,12 +16,7 @@ const LayoutWrapper = ({ children }) => {
             <Link href="/" aria-label="Tailwind CSS Blog">
               <div className="flex items-center justify-between">
                 <div className="flex mr-3">
-                  <Image
-                    src={`${prefix}/static/images/logo.svg`}
-                    alt="Logo"
-                    width={38}
-                    height={26}
-                  />
+                  <Image src={`/static/images/logo.svg`} alt="Logo" width={38} height={26} />
                 </div>
                 {typeof siteMetadata.headerTitle === 'string' ? (
                   <div className="hidden text-2xl font-semibold sm:block">
