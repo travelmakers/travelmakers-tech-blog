@@ -5,7 +5,6 @@ import MobileNav from './MobileNav'
 import SectionContainer from './SectionContainer'
 import ThemeSwitch from './ThemeSwitch'
 import headerNavLinks from '@/data/headerNavLinks'
-import { prefix } from '@/lib/prefix'
 import siteMetadata from '@/data/siteMetadata'
 
 const LayoutWrapper = ({ children }) => {
@@ -34,7 +33,7 @@ const LayoutWrapper = ({ children }) => {
               {headerNavLinks.map((link) => (
                 <Link
                   key={link.title}
-                  href={`${prefix}/${link.href}`}
+                  href={link.href}
                   className="p-1 font-medium text-gray-900 sm:p-4 dark:text-gray-100"
                 >
                   {link.title}
