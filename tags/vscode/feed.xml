@@ -1,22 +1,22 @@
 
   <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-      <title>DevBoy Blog</title>
-      <link>https://devboy.vercel.app/blog</link>
-      <description>Mohammad Reza Ghasemi&#39;s Personal Blog</description>
-      <language>en-us</language>
-      <managingEditor>mrghasemi1992@gmail.com (Mohammad Reza Ghasemi)</managingEditor>
-      <webMaster>mrghasemi1992@gmail.com (Mohammad Reza Ghasemi)</webMaster>
+      <title>Travelmakers Blog</title>
+      <link>https://travelmakers.github.io/travelmakers-tech-blog/blog</link>
+      <description>트래블메이커스의 기술, 서비스, 비전, 가치를 들려 드립니다.</description>
+      <language>ko-kr</language>
+      <managingEditor>apply@travelmakers.kr (GiDong Seong)</managingEditor>
+      <webMaster>apply@travelmakers.kr (GiDong Seong)</webMaster>
       <lastBuildDate>Mon, 08 Nov 2021 00:00:00 GMT</lastBuildDate>
-      <atom:link href="https://devboy.vercel.app/tags/vscode/feed.xml" rel="self" type="application/rss+xml"/>
+      <atom:link href="https://travelmakers.github.io/travelmakers-tech-blog/tags/vscode/feed.xml" rel="self" type="application/rss+xml"/>
       
   <item>
-    <guid>https://devboy.vercel.app/blog/vscode-snippets</guid>
+    <guid>https://travelmakers.github.io/travelmakers-tech-blog/blog/vscode-snippets</guid>
     <title>What are Snippets in VSCode?</title>
-    <link>https://devboy.vercel.app/blog/vscode-snippets</link>
+    <link>https://travelmakers.github.io/travelmakers-tech-blog/blog/vscode-snippets</link>
     <description>Code snippets are templates that make it easier to enter repeating code patterns, such as loops or conditional-statements.</description>
     <pubDate>Mon, 08 Nov 2021 00:00:00 GMT</pubDate>
-    <author>mrghasemi1992@gmail.com (Mohammad Reza Ghasemi)</author>
+    <author>apply@travelmakers.kr (GiDong Seong)</author>
     <category>vscode</category><category>snippet</category><category>react</category><category>typescript</category>
   </item>
 

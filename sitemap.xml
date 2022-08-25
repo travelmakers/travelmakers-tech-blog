@@ -1,46 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://devboy.vercel.app/about</loc>
+    <loc>https://travelmakers.github.io/travelmakers-tech-blog/about</loc>
   </url>
 
   <url>
-    <loc>https://devboy.vercel.app/blog</loc>
+    <loc>https://travelmakers.github.io/travelmakers-tech-blog/blog</loc>
   </url>
 
   <url>
-    <loc>https://devboy.vercel.app</loc>
+    <loc>https://travelmakers.github.io/travelmakers-tech-blog</loc>
   </url>
 
   <url>
-    <loc>https://devboy.vercel.app/tags</loc>
+    <loc>https://travelmakers.github.io/travelmakers-tech-blog/tags</loc>
   </url>
 
   <url>
-    <loc>https://devboy.vercel.app/blog/removing-sensitive-data-from-git</loc>
+    <loc
+      >https://travelmakers.github.io/travelmakers-tech-blog/blog/removing-sensitive-data-from-git</loc
+    >
   </url>
 
   <url>
-    <loc>https://devboy.vercel.app/blog/vscode-snippets</loc>
+    <loc>https://travelmakers.github.io/travelmakers-tech-blog/blog/vscode-snippets</loc>
   </url>
 
   <url>
-    <loc>https://devboy.vercel.app/tags/git</loc>
+    <loc>https://travelmakers.github.io/travelmakers-tech-blog/tags/git</loc>
   </url>
 
   <url>
-    <loc>https://devboy.vercel.app/tags/react</loc>
+    <loc>https://travelmakers.github.io/travelmakers-tech-blog/tags/react</loc>
   </url>
 
   <url>
-    <loc>https://devboy.vercel.app/tags/snippet</loc>
+    <loc>https://travelmakers.github.io/travelmakers-tech-blog/tags/snippet</loc>
   </url>
 
   <url>
-    <loc>https://devboy.vercel.app/tags/typescript</loc>
+    <loc>https://travelmakers.github.io/travelmakers-tech-blog/tags/typescript</loc>
   </url>
 
   <url>
-    <loc>https://devboy.vercel.app/tags/vscode</loc>
+    <loc>https://travelmakers.github.io/travelmakers-tech-blog/tags/vscode</loc>
   </url>
 </urlset>
