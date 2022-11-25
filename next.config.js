@@ -66,7 +66,7 @@ module.exports = withBundleAnalyzer({
     loader: 'imgix',
     path:
       process.env.NODE_ENV === 'development'
-        ? `http://localhost:3001/`
+        ? `http://localhost:3000/`
         : 'https://travelmakers.github.io/travelmakers-tech-blog/',
   },
   async headers() {
