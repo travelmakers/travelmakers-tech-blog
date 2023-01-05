@@ -5,7 +5,7 @@
   </url>
 
   <url>
-    <loc>https://travelmakers.github.io/travelmakers-tech-blog/blog</loc>
+    <loc>https://travelmakers.github.io/travelmakers-tech-blog/design</loc>
   </url>
 
   <url>
@@ -13,7 +13,15 @@
   </url>
 
   <url>
-    <loc>https://travelmakers.github.io/travelmakers-tech-blog/tags</loc>
+    <loc>https://travelmakers.github.io/travelmakers-tech-blog/press</loc>
+  </url>
+
+  <url>
+    <loc>https://travelmakers.github.io/travelmakers-tech-blog/service</loc>
+  </url>
+
+  <url>
+    <loc>https://travelmakers.github.io/travelmakers-tech-blog/tech</loc>
   </url>
 
   <url>
@@ -24,25 +32,5 @@
 
   <url>
     <loc>https://travelmakers.github.io/travelmakers-tech-blog/blog/vscode-snippets</loc>
-  </url>
-
-  <url>
-    <loc>https://travelmakers.github.io/travelmakers-tech-blog/tags/git</loc>
-  </url>
-
-  <url>
-    <loc>https://travelmakers.github.io/travelmakers-tech-blog/tags/react</loc>
-  </url>
-
-  <url>
-    <loc>https://travelmakers.github.io/travelmakers-tech-blog/tags/snippet</loc>
-  </url>
-
-  <url>
-    <loc>https://travelmakers.github.io/travelmakers-tech-blog/tags/typescript</loc>
-  </url>
-
-  <url>
-    <loc>https://travelmakers.github.io/travelmakers-tech-blog/tags/vscode</loc>
   </url>
 </urlset>
