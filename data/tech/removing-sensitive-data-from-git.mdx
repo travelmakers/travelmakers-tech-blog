@@ -1,0 +1,89 @@
+---
+title: 'Removing sensitive data from the git history'
+date: '2021-09-03'
+lastmod: '2021-09-03'
+tags: ['git']
+draft: false
+summary: 'Its a bad practice to keep sensitive data like password in your repository. How can I remove that from previous commits (git history)?'
+# Photo by <a href="https://unsplash.com/@yancymin?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Yancy Min</a> on <a href="https://unsplash.com/s/photos/code?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+authors: ['default']
+---
+
+![tailwind-nextjs-banner](/static/images/yancy-min-code-unsplash.jpg)
+
+Perhaps you saved sensitive data like a password or a token in your project. From a security point of view, it’s a bad practice to put them in your code directly and keep them in the repository. For example, the best approach in the Node.js app and other languages is to save sensitive data in the environment variables. So it is kept in a separate file called `.env`. Not to be tracked by Git, it is added to `.gitignore`. But if you check your previous commits, you will see that sensitive data exists in the git history. So what should be done now?!
+
+---
+
+You have two options: [Git built-in command](https://git-scm.com/docs/git-filter-branch) `git filter-branch` or [BFG Repo-Cleaner tool](https://rtyley.github.io/bfg-repo-cleaner/). In this article, I want to show how to use the BFG Repo-Cleaner tool to rewrite your repository’s history.
+
+> The BFG Repo-Cleaner is a tool that’s built and maintained by the open-source community. It provides a faster, simpler alternative to `git filter-branch` for removing unwanted data. ([GitHub](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository#using-the-bfg))
+
+---
+
+```javascript
+mongoose
+  .connect(
+    'mongodb+srv://user<password>@cluster0.fzrkd.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
+    {
+      useNewUrlParser: true,
+      useCreateIndex: true,
+      useFindAndModify: false,
+      useUnifiedTopology: true,
+    }
+  )
+  .then(() => console.log('DB connection successful!'))
+```
+
+The above code is a part of a Node.js app that allows you to connect to the MongoDB Atlas via mongoose driver. For that, you need a connection string that has been bold in that code. That connection string is a sample of sensitive data.
+
+At first, create a file `.env`.local to save your connection string in a variable called `DATABASE`.
+
+```
+DATABASE=mongodb+srv://user<password>@cluster0.fzrkd.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+```
+
+Then replace that connection string with the one in `.env.local` as `process.env.DATABASE` in your code like below:
+
+```javascript
+mongoose
+  .connect(process.env.DATABASE, {
+    useNewUrlParser: true,
+    useCreateIndex: true,
+    useFindAndModify: false,
+    useUnifiedTopology: true,
+  })
+  .then(() => console.log('DB connection successful!'))
+```
+
+In Node.js, you can access environment variables through `process`.
+
+You will commit the changes, although previous ones show the connection string right in the code. To replace that connection string with `process.env.DATABASE` the rest of the commits should be followed by these instructions:
+
+- If in a macOS, you can use Homebrew to install the BFG Repo-Cleaner tool: `brew install bfg` and if in Windows, use Chocolatey: `choco install bfg-repo-cleaner` or download its jar file from their [site](https://rtyley.github.io/bfg-repo-cleaner/).
+
+- Replace the sensitive data with the one you want, then commit your changes. Don’t forget this step. In this case, replace `mongodb+srv://user<password>@cluster0.fzrkd.mongodb.net/myFirstDatabase?retryWrites=true&w=majority` with `process.env.DATABASE`.
+
+- Create a text file (e.x. `replacements.txt`) to the substitutions. According to [Tyle answered in StackOverflow](https://stackoverflow.com/a/15730571/7515532), in this case, the text file contains:
+
+```
+DATABASE=mongodb+srv://user<password>@cluster0.fzrkd.mongodb.net/myFirstDatabase?retryWrites=true&w=majority==>process.env.DATABASE
+```
+
+- Then run the below code from your project folder. If you installed BFG through its jar file from their site, replace the `bfg` command with `java -jar bfg.jar`.
+
+```
+bfg --replace-text replacements.txt
+```
+
+- After getting the “BFG run is complete!” message, run this code:
+
+```
+git reflog expire --expire=now --all && git gc --prune=now --aggressive
+```
+
+- Now check your previous commits, and you will see the replacements overall in the repository.
+
+---
+
+If you like this article, you can support me by ☕️ [buying a coffee](https://www.buymeacoffee.com/luckydevboy) ☕️ and motivating me to publish more articles.

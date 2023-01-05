@@ -1,0 +1,89 @@
+---
+title: '디자인시스템'
+date: '2021-11-08'
+lastmod: '2021-11-08'
+tags: ['vscode', 'snippet', 'react', 'typescript', 'sgd']
+draft: false
+summary: 'Code snippets are templates that make it easier to enter repeating code patterns, such as loops or conditional-statements.'
+authors: ['default']
+---
+
+![tailwind-nextjs-banner](/static/images/vs-code-snippets.png)
+
+> Code snippets are templates that make it easier to enter repeating code patterns, such as loops or conditional-statements. ([Visual Studio Code](https://code.visualstudio.com/docs/editor/userdefinedsnippets))
+
+For example, in JavaScript, instead of inserting `console.log(’Hello World…’)` you can use VSCode built-in snippet `log` by inserting it, then press the tab button to show that entirely on the editor. There are many other built-in snippets on the VSCode that you can use:
+
+1. Press `shift+cmd+p` in Mac or `shift+ctrl+p` in Windows to open the Command Palette.
+
+2. Insert `Insert Snippet` command in the Command Palette to get a list of the snippets for the language of the current file, then press the enter button to see them.
+
+---
+
+> Many [extensions](https://code.visualstudio.com/docs/editor/extension-marketplace) on the [VS Code Marketplace](https://marketplace.visualstudio.com/vscode) include snippets. You can search for extensions that contain snippets in the Extensions view (`shift+cmd+x` in Mac or `shift+ctrl+x` in Windows) using the `@category:"snippets"` filter. ([Visual Studio Code](https://code.visualstudio.com/docs/editor/userdefinedsnippets#_install-snippets-from-the-marketplace))
+
+## How to create your own snippets?
+
+I’m working with React, and there is a popular snippet extension for React on the VS Code Marketplace, but most of its snippets are useless for me. So I prefer to create my own snippets instead.
+
+I want to create a React TypeScript component snippet which takes its name from the file name:
+
+1. Open the Command Palette by pressing `shift+cmd+p` in Mac or `shift+ctrl+p` in Windows.
+
+2. Insert `configure user snippets`
+
+3. Select the language for which the snippets
+   should appear.
+
+4. For example, to create a snippet for a React
+   TypeScript file, choose `typescriptreact` then press the enter button.
+
+5. VSCode will open a `***.json` (`typescriptreact.json` for the previous selection).
+
+6. Insert the below attribute on the `***.json` (`typescriptreact.json`) object:
+
+```javascript
+"React Arrow Function Component": {
+  "prefix": "trafc",
+  "body": [
+    "type Props = {};\n",
+    "const $TM_FILENAME_BASE = ({}: Props) => {",
+    "  return <></>;",
+    "};\n",
+    "export default $TM_FILENAME_BASE;\n"
+  ],
+  "description": "Create TypeScript React arrow function component"
+}
+```
+
+7. You can use `trafc` snippet for React TypeScript file.
+
+Now I want to describe what the above code says:
+
+- “React Arrow Function Component” is the snippet name. It is displayed via IntelliSense if no `description` is provided.
+
+- `prefix` is the snippet that we can use on the VSCode to display the `body`.
+
+- `body` is an array of strings consisting of the code we want to be displayed via the `prefix` snippet. Every line of our codes should be placed in a string. If you need to use enter character type `\n`.
+
+- `description` as its name shows is the description of our snippet.
+
+---
+
+Another example is to create a ‍‍`console.log` with a description like `console.log("status:", status)`. The snippet configuration is shown in the below section:
+
+```javascript
+"console.log with description": {
+  "prefix": "lg",
+  "body": ["console.log('${1:desc}:', ${1:desc})"],
+  "description": "Insert a console.log() with description as the           same as the variable."
+}
+```
+
+1. The new thing is the `${1:desc}`. The `1` means after you insert the snippet, the cursor will be placed on that position.
+
+2. `desc` means these two parts should be the same in order to VSCode type them simultaneously. For more information [check this link](https://code.visualstudio.com/docs/editor/userdefinedsnippets#_create-your-own-snippets).
+
+---
+
+If you like this article, you can support me by ☕️ [buying a coffee](https://www.buymeacoffee.com/luckydevboy) ☕️ and motivating me to publish more articles.
