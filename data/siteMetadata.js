@@ -2,7 +2,7 @@ const siteMetadata = {
   title: 'Travelmakers Blog',
   author: 'GiDong Seong',
   headerTitle: 'Travelmakers Blog',
-  description: '트래블메이커스의 기술, 서비스, 비전, 가치를 들려 드립니다.',
+  description: '트래블메이커스의 기술, 서비스, 디자인, 비전, 가치를 들려 드립니다.',
   language: 'ko-kr',
   theme: 'system', // system, dark or light
   siteUrl: 'https://travelmakers.github.io/travelmakers-tech-blog',

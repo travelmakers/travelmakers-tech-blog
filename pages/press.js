@@ -25,7 +25,7 @@ export default function Blog({ posts, initialDisplayPosts, pagination }) {
         posts={posts}
         initialDisplayPosts={initialDisplayPosts}
         pagination={pagination}
-        title="Press Posts"
+        title="Press & Posts"
       />
     </>
   )
